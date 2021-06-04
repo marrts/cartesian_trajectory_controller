@@ -1,0 +1,20 @@
+# Subscribed Topics
+current_wrench_topic: /wrench     # geometry_msgs::WrenchStamped topic with the current force data
+
+# Published Topics
+cartesian_compliance_target_wrench_topic: /pos_compliance_controller/target_wrench    # geometry_msgs::WrenchStamped topic that will be published to for the cartesian controllers package
+cartesian_compliance_target_position_topic: /pos_compliance_controller/target_frame   # geometry_msgs::PoseStamped topic that will be published to for the cartesian controllers package
+current_speed_topic: /speed       # Float64 topic with the speed data of the frame of ineterest
+
+# Tool Frames
+refence_frame: base_link          # Reference frame for Cartesian values in trajectory
+
+# Controller Parameters
+control_rate: 100                 # Control loop rate (hz)
+Kp_vel: 0.05                      # Proportional gain for speed control
+Kp_force: 0.00003                 # Proportional gain for force control
+Ki_force: 0.000005                # Integral gain for force control
+Kd_force: 0.00005                 # Derivative gain for force control
+target_force_filter: 0.95         # Weight of updated force based on previous force (higher -> stronger filter)
+speed_filter: 0.98                # Weight of updated speed based on previous speed
+virtual_targ_pose_filter: 0.0005  # Weight of previous virtual target pose

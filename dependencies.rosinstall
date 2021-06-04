@@ -1,0 +1,4 @@
+- git: {local-name: cartesian_controllers, uri: 'https://github.com/fzi-forschungszentrum-informatik/cartesian_controllers.git', version: 87f11cf}
+- git: {local-name: cartesian_trajectory_msgs, uri: 'https://github.com/marrts/cartesian_trajectory_msgs.git', version: master}
+
+
